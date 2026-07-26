@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive,noimageindex,nosnippet">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src data:; frame-src 'self' data: blob:; base-uri 'none'; form-action 'self'">
+    <title>Archivo familiar · Acceso reservado</title>
+    <link rel="stylesheet" href="./lock.css">
+  </head>
+  <body>
+    <main id="gate">
+      <section aria-labelledby="access-title">
+        <div class="seal" aria-hidden="true">AF</div>
+        <p class="kicker">Archivo familiar cifrado</p>
+        <h1 id="access-title">Acceso reservado</h1>
+        <p class="intro">Introduce el código familiar de cuatro dígitos para abrir el archivo en este dispositivo.</p>
+        <form id="unlock-form">
+          <label for="access-code">Código de acceso</label>
+          <input id="access-code" name="code" type="password" inputmode="numeric" pattern="[0-9]{4}" autocomplete="one-time-code" minlength="4" maxlength="4" required autofocus>
+          <p class="error" id="error" role="alert" hidden>El código no es correcto. Inténtalo de nuevo.</p>
+          <button id="unlock-button" type="submit">Abrir el archivo</button>
+        </form>
+        <p class="note">El contenido se descifra localmente y vuelve a bloquearse al recargar.</p>
+      </section>
+    </main>
+    <iframe id="archive-frame" title="Archivo familiar" sandbox="allow-popups allow-popups-to-escape-sandbox" hidden></iframe>
+    <script src="./unlock.js" defer></script>
+  </body>
+</html>
