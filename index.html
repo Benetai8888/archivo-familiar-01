@@ -15,11 +15,11 @@
         <div class="seal" aria-hidden="true">AF</div>
         <p class="kicker">Archivo familiar cifrado</p>
         <h1 id="access-title">Acceso reservado</h1>
-        <p class="intro">Introduce el código familiar de cuatro dígitos para abrir el archivo en este dispositivo.</p>
+        <p class="intro">Introduce la contraseña familiar para abrir el archivo en este dispositivo.</p>
         <form id="unlock-form">
-          <label for="access-code">Código de acceso</label>
-          <input id="access-code" name="code" type="password" inputmode="numeric" pattern="[0-9]{4}" autocomplete="one-time-code" minlength="4" maxlength="4" required autofocus>
-          <p class="error" id="error" role="alert" hidden>El código no es correcto. Inténtalo de nuevo.</p>
+          <label for="access-code">Contraseña de acceso</label>
+          <input id="access-code" name="code" type="password" autocomplete="current-password" minlength="20" maxlength="128" required autofocus>
+          <p class="error" id="error" role="alert" hidden>La contraseña no es correcta. Inténtalo de nuevo.</p>
           <button id="unlock-button" type="submit">Abrir el archivo</button>
         </form>
         <p class="note">El contenido se descifra localmente y vuelve a bloquearse al recargar.</p>

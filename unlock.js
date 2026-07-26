@@ -73,7 +73,7 @@ form.addEventListener("submit",async(event)=>{
   event.preventDefault();
   const code=input.value.trim();
   error.hidden=true;
-  if(!/^\d{4}$/.test(code)){
+  if(code.length<20||code.length>128){
     error.hidden=false;
     input.focus();
     return;
